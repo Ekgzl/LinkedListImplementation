@@ -24,26 +24,19 @@ This repository contains implementations of linked list data structure in C++ la
 #include "unordered.h"
 
 int main() {
-    // Create an ordered linked list
     orderedLinkedList<int> list;
 
-    // Prompt user to enter integers and add them to the list
     int temp;
     std::cout << "Enter integers (-99 to stop): ";
     std::cin >> temp;
     while(temp != -99) {
         list.insert(temp);
-        std::cin >> temp;
-    }
+        std::cin >> temp;}
 
-    // Print the list to the console
     std::cout << "List: " << list;
 
-    // Delete a specific element from the list
     int itemToDelete = 13;
     list.deleteNode(itemToDelete);
-
-    // Print the updated list to the console
     std::cout << "List after deletion: " << list;
 
     return 0;
